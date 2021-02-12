@@ -11,8 +11,12 @@ class IndexView(TemplateView):
     return context
 
 class SchoolListView(ListView):
+  context_object_name = 'schools' # use this if you want to give a custom name to the generated list
   model = models.School
+  # it generates school_list by default
 
 class SchoolDetailView(DetailView):
+  context_object_name = 'school_detail' # use this if you want to give a custom name to the generated detail
   model = models.School
   template_name = 'basic_app/school_detail.html'
+  # it generates school by default
