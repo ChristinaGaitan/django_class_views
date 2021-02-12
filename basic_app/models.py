@@ -12,6 +12,7 @@ class School(models.Model):
 class Student(models.Model):
   name = models.CharField(max_length=256)
   age = models.PositiveIntegerField()
+  # Related name should be in plural :(
   school = models.ForeignKey(School,related_name='student', on_delete=models.CASCADE)
 
   def __str__(self):
