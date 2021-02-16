@@ -8,4 +8,5 @@ urlpatterns = [
     path('', views.SchoolListView.as_view(), name='list'),
     path('create/', views.SchoolCreateView.as_view(), name='create'),
     path('<slug:pk>/', views.SchoolDetailView.as_view(), name='detail'),
+    path('update/<slug:pk>/', views.SchoolUpdateView.as_view(), name='update'),
 ]
